@@ -14,4 +14,11 @@ class TestNumStack {
     NumStack stk = new NumStack();
   }
 
+  @Test
+  void testNumStackPush() {
+    NumStack stk = new NumStack();
+    Entry ent = new Entry(2);
+    stk.push(ent);
+  }
+
 }
