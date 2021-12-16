@@ -9,10 +9,16 @@ class TestRevPolishCalc {
   void testRevPolishCalcCreate() {
     RevPolishCalc rpcalc = new RevPolishCalc();
   }
-  
+
   @Test
   void testRevPolishCalcEvaluate() {
     RevPolishCalc rpcalc = new RevPolishCalc();
-    assertEquals(rpcalc.evaluate("2 2 +"),4);
+    assertEquals(rpcalc.evaluate("2 2 +"), 4);
+  }
+
+  @Test
+  void testRevPolishCalcEvaluate2() {
+    RevPolishCalc rpcalc = new RevPolishCalc();
+    assertEquals(rpcalc.evaluate("2 2 + 2 +"), 6);
   }
 }
