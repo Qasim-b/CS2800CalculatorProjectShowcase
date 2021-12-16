@@ -12,12 +12,12 @@ class TestRevPolishCalc {
 
   @Test
   void testRevPolishCalcEvaluate() { // test 27 - passed by creating evaluate 
-    RevPolishCalc rpcalc = new RevPolishCalc(); // with addition handling
+    RevPolishCalc rpcalc = new RevPolishCalc(); // with addition handling.
     assertEquals(rpcalc.evaluate("2 2 +"), 4);
   }
 
   @Test
-  void testRevPolishCalcEvaluate2() { // test 28 - extra test for addition
+  void testRevPolishCalcEvaluate2() { // test 28 - extra test for addition.
     RevPolishCalc rpcalc = new RevPolishCalc();
     assertEquals(rpcalc.evaluate("2 2 + 2 +"), 6);
   }
@@ -38,5 +38,11 @@ class TestRevPolishCalc {
   void testRevPolishCalcDivide() { // test 31 - passed by creating division handling.
     RevPolishCalc rpcalc = new RevPolishCalc();
     assertEquals(rpcalc.evaluate("6 3 /"), 2);
+  }
+  
+  @Test
+  void testRevPolishCalcDivide2() { // test 32 - extra division test.
+    RevPolishCalc rpcalc = new RevPolishCalc();
+    assertEquals(rpcalc.evaluate("6 3 / 2 /"), 1);
   }
 }
