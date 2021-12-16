@@ -1,6 +1,7 @@
 package uk.ac.rhul.cs2800;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 
 class TestNumStack {
@@ -11,25 +12,50 @@ class TestNumStack {
   }
 
   @Test
-  void testNumStackPush() { // test 20- passed by inheriting from stack class.
+  void testNumStackPush() { // test 20- passed by setting up push method.
     NumStack stk = new NumStack();
-    Entry ent = new Entry(2);
-    stk.push(ent);
+    stk.push(2);
   }
+
   @Test
-  void testNumStackEval() { // test 21-
+  void testNumStackPush2() { // test 21- extra testing after test 20.
     NumStack stk = new NumStack();
-    Entry ent = new Entry(2);
-    Entry ent2 = new Entry(2);
-    Symbol plus = Symbol.PLUS;
-    Entry ent3 = new Entry(plus);
-    stk.push(ent);
-    stk.push(ent2);
-    stk.push(ent3);
-    stk.evaluate();
-
+    stk.push(2);
+    stk.push(3);
   }
 
+  @Test
+  void testNumStackPop() { // test 22 - pass by creating pop method.
+    NumStack stk = new NumStack();
+    stk.push(2);
+    stk.push(3);
+    assertEquals(3, stk.pop());
+  }
 
+  @Test
+  void testNumStackPop2() { // test 23 - pass by creating pop method.
+    NumStack stk = new NumStack();
+    stk.push(2);
+    stk.push(3);
+    assertEquals(3, stk.pop());
+    assertEquals(2, stk.pop());
+  }
 
+  @Test
+  void testStackIsEmpty() { // test 24 - pass by creating isEmpty method.
+    NumStack stk = new NumStack();
+    assertTrue(stk.isEmpty());
+    stk.push(5);
+    assertFalse(stk.isEmpty());
+  }
+
+  @Test
+  void testStackIsEmpty2() { // test 24 - pass by creating isEmpty method.
+    NumStack stk = new NumStack();
+    assertTrue(stk.isEmpty());
+    stk.push(5);
+    assertFalse(stk.isEmpty());
+    stk.pop();
+    assertTrue(stk.isEmpty());
+  }
 }
