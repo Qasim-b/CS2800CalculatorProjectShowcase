@@ -6,31 +6,37 @@ import org.junit.jupiter.api.Test;
 class TestRevPolishCalc {
 
   @Test
-  void testRevPolishCalcCreate() {
+  void testRevPolishCalcCreate() { // test 26 - passed by creating class file.
     RevPolishCalc rpcalc = new RevPolishCalc();
   }
 
   @Test
-  void testRevPolishCalcEvaluate() {
-    RevPolishCalc rpcalc = new RevPolishCalc();
+  void testRevPolishCalcEvaluate() { // test 27 - passed by creating evaluate 
+    RevPolishCalc rpcalc = new RevPolishCalc(); // with addition handling
     assertEquals(rpcalc.evaluate("2 2 +"), 4);
   }
 
   @Test
-  void testRevPolishCalcEvaluate2() {
+  void testRevPolishCalcEvaluate2() { // test 28 - extra test for addition
     RevPolishCalc rpcalc = new RevPolishCalc();
     assertEquals(rpcalc.evaluate("2 2 + 2 +"), 6);
   }
   
   @Test
-  void testRevPolishCalcSubtract() {
+  void testRevPolishCalcSubtract() { // test 29 - passed by adding subtraction handling.
     RevPolishCalc rpcalc = new RevPolishCalc();
     assertEquals(rpcalc.evaluate("4 2 -"), 2);
   }
   
   @Test
-  void testRevPolishCalcSubtract2() {
+  void testRevPolishCalcSubtract2() { // test 30 - extra subtraction test.
     RevPolishCalc rpcalc = new RevPolishCalc();
     assertEquals(rpcalc.evaluate("4 2 - 1 -"), 1);
+  }
+  
+  @Test
+  void testRevPolishCalcDivide() { // test 31 - passed by creating division handling.
+    RevPolishCalc rpcalc = new RevPolishCalc();
+    assertEquals(rpcalc.evaluate("6 3 /"), 2);
   }
 }
