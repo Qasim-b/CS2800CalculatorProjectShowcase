@@ -25,6 +25,6 @@ class TestRevPolishCalc {
   @Test
   void testRevPolishCalcSubtract() {
     RevPolishCalc rpcalc = new RevPolishCalc();
-    assertEquals(rpcalc.evaluate("4 - 2"), 2);
+    assertEquals(rpcalc.evaluate("4 2 -"), 2);
   }
 }
