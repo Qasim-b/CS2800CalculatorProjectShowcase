@@ -30,6 +30,9 @@ public class RevPolishCalc implements Calculator {
           case ("-"):
             values.push(secondnum - firstnum);
             break;
+          case ("/"):
+            values.push(secondnum / firstnum);
+            break;
         }
       }
 
