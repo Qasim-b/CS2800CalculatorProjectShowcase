@@ -1,7 +1,7 @@
 package uk.ac.rhul.cs2800;
 
 import static org.junit.jupiter.api.Assertions.*;
-
+import java.util.EmptyStackException;
 import org.junit.jupiter.api.Test;
 
 class TestNumStack {
@@ -58,4 +58,11 @@ class TestNumStack {
     stk.pop();
     assertTrue(stk.isEmpty());
   }
+  
+  @Test
+  void testException() {
+    NumStack stk = new NumStack();
+    assertThrows(EmptyStackException.class, () -> stk.pop());
+  }
+  
 }
