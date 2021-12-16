@@ -13,7 +13,7 @@ public class RevPolishCalc implements Calculator {
    * Evaluates a given argument in reverse polish format.
    */
   public float evaluate(String what) throws IllegalArgumentException {
-    String[] splitInput = what.split(" ");
+    String[] splitInput = what.split(" "); // splits string into an array of numbers and symbols.
     String symbols = "*/+-";
     float firstnum;
     float secondnum;
@@ -26,7 +26,10 @@ public class RevPolishCalc implements Calculator {
         switch (t) {
           case ("+"):
             values.push(firstnum + secondnum);
-
+            break;
+          case ("-"):
+            values.push(secondnum - firstnum);
+            break;
         }
       }
 
