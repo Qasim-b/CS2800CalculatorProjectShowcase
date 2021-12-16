@@ -15,12 +15,23 @@ public class RevPolishCalc implements Calculator {
   public float evaluate(String what) throws IllegalArgumentException {
     String[] splitInput = what.split(" ");
     String symbols = "*/+-";
+    float firstnum;
+    float secondnum;
     for (String t : splitInput) {
-      if (!symbols.contains(t)) {
-        values.push(Float.parseFloat(t));
+      if (!symbols.contains(t)) { // checks if the current item in the array is a symbol.
+        values.push(Float.parseFloat(t)); // if not a symbol it is pushed onto the numstack.
+      } else {
+        firstnum = values.pop();
+        secondnum = values.pop();
+        switch (t) {
+          case ("+"):
+            values.push(firstnum + secondnum);
+
+        }
       }
+
     }
-    return 0;
+    return values.pop();
 
   }
 }
