@@ -13,6 +13,6 @@ class TestRevPolishCalc {
   @Test
   void testRevPolishCalcEvaluate() {
     RevPolishCalc rpcalc = new RevPolishCalc();
-    assertEquals(rpcalc.evaluate("2 + 2"),4);
+    assertEquals(rpcalc.evaluate("2 2 +"),4);
   }
 }
