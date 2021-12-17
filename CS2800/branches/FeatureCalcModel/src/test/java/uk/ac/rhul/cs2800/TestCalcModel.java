@@ -10,4 +10,10 @@ class TestCalcModel {
     CalcModel calcmod = new CalcModel();
   }
 
+  @Test
+  void testCalcModelEval() {
+    CalcModel calcmod = new CalcModel();
+    assertTrue(calcmod.evaluate("2 2 +",false),4);
+  }
+
 }
