@@ -60,7 +60,7 @@ class TestNumStack {
   }
   
   @Test
-  void testException() {
+  void testException() { // test 25 - pass using stacks inbuilt thrown error.
     NumStack stk = new NumStack();
     assertThrows(EmptyStackException.class, () -> stk.pop());
   }
