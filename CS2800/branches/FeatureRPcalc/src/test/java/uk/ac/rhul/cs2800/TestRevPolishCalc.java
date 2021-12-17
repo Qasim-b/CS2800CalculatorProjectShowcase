@@ -45,4 +45,9 @@ class TestRevPolishCalc {
     RevPolishCalc rpcalc = new RevPolishCalc();
     assertEquals(rpcalc.evaluate("6 3 / 2 /"), 1);
   }
+  
+  void testRevPolishCalcMulitply() { // test 33 - passed by adding multiplication handling.
+    RevPolishCalc rpcalc = new RevPolishCalc();
+    assertEquals(rpcalc.evaluate("6 3 *"), 18);
+  }
 }
