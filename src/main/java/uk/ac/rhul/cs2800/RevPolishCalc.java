@@ -9,8 +9,11 @@ package uk.ac.rhul.cs2800;
 public class RevPolishCalc implements Calculator {
   private NumStack values = new NumStack();
 
+ 
   /**
-   * Evaluates a given argument in reverse polish format.
+   *Evaluates the reverse polish expression and returns the result.
+   *
+   *@return float value answer of calculation
    */
   public float evaluate(String what) throws IllegalArgumentException {
     String[] splitInput = what.split(" "); // splits string into an array of numbers and symbols.
